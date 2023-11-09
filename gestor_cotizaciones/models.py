@@ -12,7 +12,7 @@ class SolicitudCotizacion(MensajeFormulario):
     tipo_de_evento = models.IntegerChoices("Tipo de Evento", "MATRIMONIO CUMPLEAÑOS GALA_4TO_MEDIO")
     cantidad_de_personas = models.IntegerField()
     servicios = models.CharField(max_length=200)
-    productos = models.CharField()
+    productos = models.CharField(max_length=200)
     fechas = models.DateField()
 
 
