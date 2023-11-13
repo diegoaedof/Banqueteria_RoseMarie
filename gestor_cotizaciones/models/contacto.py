@@ -15,6 +15,9 @@ class Mensaje(models.Model):
     telefono = models.CharField(max_length=11)
     tipo_de_mensaje = models.CharField(max_length=len(opciones_mensaje[0]), choices=opciones_mensaje)
 
+    def __str__(self):
+        return f"{self.__class__}: {self.nombre} {self.apellidos}"
+
 
 # Hereda del modelo Mensaje, por herencia Multi-tabla (django docs).
 class SolicitudCotizacion(Mensaje):
