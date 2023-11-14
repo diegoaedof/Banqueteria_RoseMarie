@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from gestor_cotizaciones.models.contacto import Mensaje
+
 
 def panel_administracion(request):
     context= {}
@@ -13,8 +15,9 @@ def factura(request):
     return render(request, 'factura.html', context)
 
 def cotizaciones(request):
-    context = {}
-    return render(request, 'cotizaciones.html', context)
+    solicitudes =Mensaje.objects.all()
+    context= {}
+    return render(request, 'cotizaciones.html',{'solicitudes': solicitudes})
 
 def agenda(request):
     context= {}

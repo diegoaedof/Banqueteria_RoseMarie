@@ -438,6 +438,9 @@
                 <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
             </div>
         </div>  
+        <div style="position: relative; padding-bottom: 90%; height: 0; overflow: hidden;">
+          <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.instagram.com/rosem.banqueteria/embed/" frameborder="0"></iframe>
+        </div>
     </section>
 
     <!-- Sección 4 -->
@@ -531,30 +534,17 @@
         <h4 class="text-center">Si tienes una duda o necesitas asesoría para un evento no dudes en mandarnos un correo o llamarnos!</h4>
         <br>
         <!-- xd-->
-        <form action="form" method="post">
+        <form action="form" method="POST">
             <h4 class="text-center">TE LLAMAMOS?</h4>
-            <ul>
-              <li>
-                <label for="name">NOMBRE</label>
-                <br>
-                <input type="text" id="name" name="user_name" />
-              </li>
-              <li>
-                <label for="name">TELEFONO (sin +569):</label>
-                <br>
-                <input type="text" id="name" name="user_name" />
-              </li>
-              <li>
-                <label for="mail">CORREO ELECTRÓNICO</label>
-                <br>
-                <input type="email" id="mail" name="user_mail" />
-              </li>
-              <li>
-                <label for="msg">MENSAJE</label>
-                <br>
-                <textarea id="msg" name="user_message"></textarea>
-              </li>
-            </ul>
+            {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+          
+           
             <li class="button">
                 <button type="submit">LLÁMENME</button>
             </li>

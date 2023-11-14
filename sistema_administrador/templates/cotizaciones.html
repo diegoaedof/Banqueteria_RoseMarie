@@ -3,5 +3,31 @@
 
 {% block content %}
     <h1>Estoy dentro de cotizaciones</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Tipo de Evento</th>
+                <th>Cantidad de Personas</th>
+                <th>Servicios</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for solicitud in solicitudes %}
+            <tr>
+                <td>{{ solicitud.nombre }}</td>
+                <td>{{ solicitud.apellidos }}</td>
+                <td>{{ solicitud.email }}</td>
+                <td>{{ solicitud.telefono }}</td>
+                <td>{{ solicitud.tipo_de_evento}}</td>
+                <td>{{ solicitud.cantidad_de_personas }}</td>
+                <td>{{ solicitud.servicios }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock content %}
     
