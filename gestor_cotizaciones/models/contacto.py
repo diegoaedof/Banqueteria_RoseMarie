@@ -10,7 +10,7 @@ class Mensaje(models.Model):
     ]
     nombre = models.CharField(max_length=30)
     apellidos = models.CharField(max_length=50)
-    asunto = models.TextField(max_length=2000)
+    asunto = models.CharField(max_length=255)
     email = models.EmailField()
     telefono = models.CharField(max_length=11)
     tipo_de_mensaje = models.CharField(max_length=2, choices=opciones_mensaje)
