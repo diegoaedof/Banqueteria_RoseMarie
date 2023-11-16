@@ -9,4 +9,6 @@ urlpatterns = [
     path('cotizaciones', views.cotizaciones, name='cotizaciones'),
     path('agenda', views.agenda, name='agenda'),
     path('clientes', views.clientes, name='clientes'),
+    path('contactar', views.contactar, name='contactar'),
+    path('contactar/<int:id>/', views.contactar, name='contactar'),
 ]

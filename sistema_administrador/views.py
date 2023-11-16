@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from gestor_cotizaciones.models.contacto import Mensaje
-
+from publico.forms import SolicitudCotizacionForm
+from publico.forms import MensajeForm
 
 def panel_administracion(request):
     context= {}
@@ -18,6 +19,13 @@ def cotizaciones(request):
     solicitudes =Mensaje.objects.all()
     context= {}
     return render(request, 'cotizaciones.html',{'solicitudes': solicitudes})
+
+def contactar(request):
+    solicitud_id = request.POST.get('solicitud_id')
+    mens=Mensaje.objects.get(id=solicitud_id)
+    form = MensajeForm(instance=mens)
+    return render(request, 'contactar.html', {'id': solicitud_id, 'form': form})
+
 
 def agenda(request):
     context= {}

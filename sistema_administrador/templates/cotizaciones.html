@@ -2,32 +2,74 @@
 
 
 {% block content %}
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+    button {
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
     <h1>Estoy dentro de cotizaciones</h1>
+  
     <table>
+      
         <thead>
             <tr>
+        
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Email</th>
                 <th>Teléfono</th>
-                <th>Tipo de Evento</th>
-                <th>Cantidad de Personas</th>
-                <th>Servicios</th>
+                <th>Confirmacion</th>
+                
             </tr>
         </thead>
         <tbody>
             {% for solicitud in solicitudes %}
             <tr>
-                <td>{{ solicitud.nombre }}</td>
-                <td>{{ solicitud.apellidos }}</td>
-                <td>{{ solicitud.email }}</td>
-                <td>{{ solicitud.telefono }}</td>
-                <td>{{ solicitud.tipo_de_evento}}</td>
-                <td>{{ solicitud.cantidad_de_personas }}</td>
-                <td>{{ solicitud.servicios }}</td>
+               
+                    <td>{{ solicitud.nombre }}</td>
+                    <td>{{ solicitud.apellidos }}</td>
+                    <td>{{ solicitud.email }}</td>
+                    <td>{{ solicitud.telefono }}</td>
+                    <form action="contactar" method="post"> {% csrf_token %}
+                    <td>
+                        <input type="hidden" name="solicitud_id" value="{{ solicitud.id }}">
+                        <button type="submit">Agendar</button>
+                    </td>
+                </form>
+               
             </tr>
-            {% endfor %}
+        {% endfor %}
+        
         </tbody>
+
     </table>
+
 {% endblock content %}
     
