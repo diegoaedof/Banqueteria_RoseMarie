@@ -12,7 +12,7 @@ class MensajeForm(forms.ModelForm):
 class SolicitudCotizacionForm(forms.ModelForm):
     class Meta:
         model = SolicitudCotizacion
-        fields = ['nombre', 'apellidos', 'asunto', 'tipo_de_mensaje', 'email', 'telefono', 'tipo_de_evento', 'cantidad_de_personas', 'servicios']
+        fields = ['nombre', 'apellidos', 'asunto', 'tipo_de_mensaje', 'email', 'telefono', 'tipo_de_evento', 'cantidad_de_personas', 'servicios','fecha']
 
 class ProductoForm(forms.ModelForm):
     class Meta:
