@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Listado de Productos</h2>
+    <table class="table table-bordered table-responsive-md">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Unidad de Medida</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Precio Venta/Unidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.get_unidad_de_medida_display }}</td>
+                <td>{{ producto.stock }}</td>
+                <td>{{ producto.proveedor }}</td>
+                <td>{{ producto.precio_venta_unidad }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
+    
