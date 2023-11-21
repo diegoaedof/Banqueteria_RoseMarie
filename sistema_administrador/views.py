@@ -1,12 +1,10 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import ProductoForm, ServicioForm
 from .models import Producto, Servicio
 from gestor_cotizaciones.models.contacto import Mensaje
-<<<<<<< HEAD
 from gestor_cotizaciones.models.contacto import SolicitudCotizacion
 from publico.forms import SolicitudCotizacionForm
-=======
->>>>>>> develop
 from publico.forms import MensajeForm
 from django.contrib import messages
 
@@ -48,11 +46,11 @@ def agendar(request):
     cantidad_de_personas = request.POST['cantidad_de_personas']
     servicios = request.POST['servicios']
     fecha = request.POST['fecha']
-    print("XXXXXXXXXXXXXXXXXXXXXX")
-    print(mens.id)
-    repite= SolicitudCotizacion.objects.get(mensaje_ptr_id=solicitud_id)
-    if (repite== None ):
-        soli=SolicitudCotizacion.objects.create(
+    soli=SolicitudCotizacion.objects.filter(mensaje_ptr_id=solicitud_id)
+    if(soli.count() > 0):
+        return HttpResponse('Ya existe una cotizacion para esta solicitud')
+    else:
+        SolicitudCotizacion.objects.create(
         mensaje_ptr_id=solicitud_id,
         nombre=nombre,
         apellidos=apellidos,
@@ -64,9 +62,11 @@ def agendar(request):
         cantidad_de_personas = cantidad_de_personas,
         servicios = servicios,
         fecha = fecha
-    )
-    else:
-       messages.warning(request, "El código del producto debe tener 5 carácteres")
+        )
+
+
+   
+    
     return render(request, 'agenda.html')
 
 def agenda(request):
