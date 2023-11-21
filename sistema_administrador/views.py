@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import ProductoForm, ServicioForm
 from .models import Producto, Servicio
+from gestor_cotizaciones.models.contacto import Mensaje
+from publico.forms import MensajeForm
 
 def panel_administracion(request):
     context= {}
@@ -15,8 +17,16 @@ def factura(request):
     return render(request, 'factura.html', context)
 
 def cotizaciones(request):
-    context = {}
-    return render(request, 'cotizaciones.html', context)
+    solicitudes =Mensaje.objects.all()
+    context= {}
+    return render(request, 'cotizaciones.html',{'solicitudes': solicitudes})
+
+def contactar(request):
+    solicitud_id = request.POST.get('solicitud_id')
+    mens=Mensaje.objects.get(id=solicitud_id)
+    form = MensajeForm(instance=mens)
+    return render(request, 'contactar.html', {'id': solicitud_id, 'form': form})
+
 
 def agenda(request):
     context= {}

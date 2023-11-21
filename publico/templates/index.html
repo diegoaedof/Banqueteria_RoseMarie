@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+  {% load static  %}
+<head>
+    <link rel="icon" href="{% static 'index/img/cake.png' %}">
+    <link rel="stylesheet" href="{% static 'index/css/estilo.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Banquetería Rose Marie</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#Inicio" class="logo">BANQUETERÍA</a>
+	    <nav class="navbar">
+            <div class="nav-links">
+			    <ul>
+				    <li><a href="#servicios">Servicios</a>
+                        <ul class="sub">
+                            <li><a href="#tranding">Productos</a></li>
+                        </ul>
+                    </li>
+				    <li><a href="#acerca-de-3">Nosotros</a>
+                        <ul class="sub">
+                            <li><a href="#mision-vision">Misión y Visión</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#galeria-4">Galería</a></li>
+				    <li><a href="#contacto-5">Contacto</a></li>
+			    </ul>
+            </div>
+	    </nav>
+    </header>
+    <section id="Inicio">
+        <div  style="margin:-left 200px; " id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>   
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'index/img/gris.jpg' %}" class="d-block w-100" alt="avatar"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>¡Ya disponible!</h5>
+                        <p>¡Disfruta de este servicio ahora que esta disponible!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'index/img/gris.jpg' %}" class="d-block w-100" alt="avatar"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>¡Pidelo ahora!</h5>
+                        <p>El increible sabor de los pasteles te va a encantar</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'index/img/gris.jpg' %}" class="d-block w-100" alt="avatar"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Vuelve a estar en stock</h5>
+                        <p>Vive la experiencia antes que se agote</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Antes</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+        <br>
+        <br>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2 -->
+    <section id="servicios">
+      <br>
+      <br>
+      <br>
+      <br>
+        <h1 class="text-center section-headingS">Servicios</h1>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+                <div class="card-body">
+                    <h5 class="card-title">Servicio de coctelería</h5>
+                    <p class="card-text">Preparación de tragos.</p>
+                    <p class="card-text"><small class="text-muted">$200.000</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/boda.jpg' %}"alt="Card imge cap">
+                <div class="card-body">
+                    <h5 class="card-title">Servicios de boda</h5>
+                    <p class="card-text">Preparación de platillos.</p>
+                    <p class="card-text"><small class="text-muted">$350.000</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/evento1.jpg' %}"alt="Card imge cap">
+                <div class="card-body">
+                    <h5 class="card-title">Servicios de fiesta</h5>
+                    <p class="card-text">Decoración al gusto.</p>
+                    <p class="card-text"><small class="text-muted">110.000</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/canape.jpeg' %}" alt="Card imge cap">
+                <div class="card-body">
+                    <h5 class="card-title">Servicios de canapé</h5>
+                    <p class="card-text">Exquisita preparación.</p>
+                    <p class="card-text"><small class="text-muted">$59.000</small></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        
+        <div class="card-deck-c">
+            <div class="card-s bg-dark text-white">
+                <img class="card-img" src="{% static 'index/img/bod.jpg' %}"alt="Card imge">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección productos-->
+    <section id="tranding">
+      <div class="container">
+        <h3 class="text-center section-subheading">- Comida Popular -</h3>
+        <h1 class="text-center section-heading">Productos</h1>
+      </div>
+      <div class="container">
+        <div class="swiper tranding-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="{% static 'index/images/tranding-food-1.png' %}"alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$2000</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Pizza Especial
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="{% static 'index/images/tranding-food-2.png' %}"alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$2000</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Albondigas
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="{% static 'index/images/tranding-food-3.png' %}"alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$4000</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Hamburguesa
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="{% static 'index/images/tranding-food-4.png' %}"alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$1500</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Curry Fresco
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="{% static 'index/images/tranding-food-5.png' %}"alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$1500</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Panqueque
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="{% static 'index/images/tranding-food-6.png' %}"alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$2000</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Torta de Vainilla
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="{% static 'index/images/tranding-food-7.png' %}"alt="Tranding">
+              </div>
+              <div class="tranding-slide-content">
+                <h1 class="food-price">$1800</h1>
+                <div class="tranding-slide-content-bottom">
+                  <h2 class="food-name">
+                    Pan Dulce
+                  </h2>
+                  <h3 class="food-rating">
+                    <span>4.5</span>
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- Slide-end -->
+          </div>
+
+          <div class="tranding-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="{% static 'index/js/script.js' %}"></script>
+    <!-- Sección 3 -->
+    <section id="acerca-de-3">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="text-center section-headingS">Nosotros</h1>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+        </div>
+        <h2>Lo que ofrecemos</h2>
+        <p>Ofrecemos ir donde nos necesites dentro de la zona de cobertura en la Región Metropolitana con comida rica y confiable, presentada en forma atractiva y original.<br>Ponemos cariño en lo que hacemos. Entregamos atención personalizada y un servicio de garzones oportuno y cálido, lo cual se refuerza con supervisión permanente en terreno.<br><strong>Todas nuestras preparaciones:</strong> </p>
+        <ul>
+            <li>Utilizan sólo ingredientes y productos terminados frescos, de empresas líderes en su rubro y/o segmento y que cuenten con resolución sanitaria.</li>
+            <li>Son elaboradas mediante la aplicación profesional de técnicas de cocina; el equipo de cocina cuenta con formación formal en gastronomía y a esto se suma la dirección del chef quien supervisa sabor, puntos de cocción y montaje de las preparaciones.</li>
+            <li>Dentro de las preferencias del cliente, privilegiamos el uso de ingredientes saludables y cuidamos un adecuado maridaje con las bebidas.</li>
+        </ul>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Proveedores</h2>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/cuadro.png' %}"alt="Card imge cap">
+            </div>
+        </div>  
+        <div style="position: relative; padding-bottom: 90%; height: 0; overflow: hidden;">
+          <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.instagram.com/rosem.banqueteria/embed/" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <!-- Sección 4 -->
+    <section id="galeria-4">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="text-center section-headingS">Galería</h1>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/boda.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/evento1.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/canape.jpeg' %}" alt="Card imge cap">
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+          </div>
+        </div>
+        <br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/boda.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/evento1.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/canape.jpeg' %}" alt="Card imge cap">
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+          </div>
+        </div>
+        <br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/boda.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/evento1.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/canape.jpeg' %}" alt="Card imge cap">
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+          </div>
+        </div>
+        <br>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/boda.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/evento1.jpg' %}"alt="Card imge cap">
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'index/img/comida/canape.jpeg' %}" alt="Card imge cap">
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="{% static 'index/img/comida/bebida.jpg' %}"alt="Card imge cap">
+          </div>
+        </div>
+    </section>
+
+    <!-- Sección 5 -->
+    <section id="contacto-5">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="text-center section-headingS">Contacto</h1>
+        <h3 class="text-center section-subheading">- ESCRÍBENOS -</h3>
+        <h4 class="text-center">Si tienes una duda o necesitas asesoría para un evento no dudes en mandarnos un correo o llamarnos!</h4>
+        <br>
+        <!-- xd-->
+        <form action="form" method="POST">
+            <h4 class="text-center">TE LLAMAMOS?</h4>
+            {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+          
+           
+            <li class="button">
+                <button type="submit">LLÁMENME</button>
+            </li>
+          </form>
+        <!-- xd -->
+ 
+    </section>
+     <!-- Sección 6 -->
+     <section id="mision-vision">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="text-center section-headingS">Visión y Misión</h1>
+        <h3 class="text-center section-subheading">- Declaraciones Estratégicas -</h3>
+        <h3>Nuestra misión</h3>
+        <p>Somos una empresa de banquetería que ofrece cocina gourmet y servicio de alta calidad a sus clientes, principalmente empresas del Gran Santiago. <br>  Buscamos desarrollarnos como personas y profesionales así como crecer como negocio, en forma sustentable con la comunidad en la que nos insertamos, nuestros trabajadores y el ambiente.</p>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3>Nuestra visión</h3>
+        <P>Aspiramos a convertirnos en un negocio gastronómico reconocido en el Gran Santiago por ofrecer experiencias y sabores inolvidables, con una buena relación calidad / precio y en forma sustentable.</P>
+        <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h3>Nuestros valores</h3>
+            <ul> 
+                <li>Calidez y Orientación al Cliente</li>
+                <li>Trabajo en Equipo</li>
+                <li>Creatividad</li>
+                <li>Orden e Higiene</li>
+                <li>Compromiso</li>
+                <li>Integridad</li>
+                <li>Sustentabilidad</li>
+            </ul>
+    </section>
+    <div id="footer"></div>
+</body>
+</html>

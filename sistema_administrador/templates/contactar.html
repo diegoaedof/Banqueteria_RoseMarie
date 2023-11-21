@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+
+{% block content %}
+
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group">
+            
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+        </div>
+    {% endfor %}
+    <button>Boton para guardar y mandar pa la agenda</button>
+{% endblock content %}
+    

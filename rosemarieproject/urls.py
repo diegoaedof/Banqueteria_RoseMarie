@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from publico.views import index
+from publico.views import form
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', index),
+    path('home/form', form),
     path('',include('sistema_administrador.urls')),
 ]
