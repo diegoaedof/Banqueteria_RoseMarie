@@ -1,3 +1,3 @@
 from django.db import models
-
-# Create your models here.
+from gestor_productos.models.Producto import Producto
+from gestor_productos.models.Servicio import Servicio
