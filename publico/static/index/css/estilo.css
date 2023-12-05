@@ -11,6 +11,7 @@ html{
     font-size: 82.5%;
     scroll-behavior: smooth;
 }
+
 header{
     position: fixed;
     top: 0;
